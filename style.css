@@ -1,0 +1,126 @@
+/* ---- Configurações Gerais e de Fundo ---- */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5; /* Um cinza claro para o fundo */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #213A64 0%, #764ba2 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 680px; /* Largura máxima para desktops */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ---- Perfil e Logo ---- */
+.profile {
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: auto;
+    height: 220px;
+    border-radius: 0%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.profile h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.profile p {
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+
+/* ---- Cartões de Links ---- */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os links */
+}
+
+.link-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.link-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.link-card .icon {
+    font-size: 1.4em;
+    margin-right: 15px;
+}
+
+/* ---- Link Desabilitado ---- */
+.link-card.disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.link-card.disabled:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Rodapé ---- */
+.footer {
+    margin-top: 40px;
+    color: #e0e0e0;
+    font-size: 0.9em;
+}
+
+
+/* ---- Responsividade para Telas Menores (Mobile First) ---- */
+/* O design base já é focado em mobile, então poucas alterações são necessárias. */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .profile h1 {
+        font-size: 1.8em;
+    }
+
+    .profile p {
+        font-size: 1em;
+    }
+
+    .link-card {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .link-card .icon {
+        margin-right: 10px;
+    }
+}
