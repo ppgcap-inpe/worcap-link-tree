@@ -137,6 +137,54 @@ body {
     font-size: 0.9em;
 }
 
+/* ---- Estilos do Contador Regressivo ---- */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border-color);
+    width: fit-content;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50px;
+}
+
+.time-unit span {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--text-color-primary);
+    line-height: 1;
+}
+
+.time-unit label {
+    font-size: 0.8em;
+    color: var(--text-color-secondary);
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* ---- Ajuste de Responsividade para o Contador ---- */
+@media (max-width: 480px) {
+    #countdown {
+        gap: 10px;
+        padding: 10px 15px;
+    }
+    .time-unit span {
+        font-size: 1.8em;
+    }
+    .time-unit label {
+        font-size: 0.7em;
+    }
+}
+
 /* ---- Responsividade ---- */
 @media (max-width: 480px) {
     body { padding: 15px; }

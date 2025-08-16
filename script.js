@@ -26,3 +26,32 @@ document.addEventListener('DOMContentLoaded', function() {
         starBackground.appendChild(star);
     }
 });
+
+// NOVO: Lógica do Contador Regressivo
+const countdown = () => {
+    const targetDate = new Date('2025-09-09T00:00:00').getTime();
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    // Se a data já passou, para o contador
+    if (difference < 0) {
+        clearInterval(interval);
+        document.getElementById('countdown').innerHTML = "<h2>O evento já começou!</h2>";
+        return;
+    }
+
+    // Cálculos de tempo
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    // Atualiza o HTML
+    document.getElementById('days').innerText = String(days).padStart(2, '0');
+    document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+    document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+};
+
+// Inicia o contador e o atualiza a cada segundo
+const interval = setInterval(countdown, 1000);
