@@ -1,7 +1,7 @@
 /* ---- Definição de Variáveis de Cor e Configurações Gerais ---- */
 :root {
-    --bg-start: #0c001a;
-    --bg-end: #00041a;
+    --bg-start: #000000;
+    --bg-end: #1C1C1C;
     --card-bg-color: rgba(255, 255, 255, 0.1);
     --card-border-color: rgba(255, 255, 255, 0.2);
     --card-hover-bg-color: rgba(255, 255, 255, 0.25);
